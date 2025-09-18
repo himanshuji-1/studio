@@ -1,3 +1,34 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-landing",
+      "description": "A stunning landscape of mountains and a lake at sunrise, representing adventure and travel.",
+      "imageUrl": "https://picsum.photos/seed/hero/1920/1080",
+      "imageHint": "mountain landscape"
+    },
+    {
+      "id": "trip-paris",
+      "description": "The Eiffel Tower in Paris, France.",
+      "imageUrl": "https://picsum.photos/seed/paris/600/400",
+      "imageHint": "Eiffel Tower"
+    },
+    {
+      "id": "trip-tokyo",
+      "description": "The bustling city skyline of Tokyo, Japan at night.",
+      "imageUrl": "https://picsum.photos/seed/tokyo/600/400",
+      "imageHint": "Tokyo skyline"
+    },
+    {
+      "id": "trip-rome",
+      "description": "The ancient Colosseum in Rome, Italy.",
+      "imageUrl": "https://picsum.photos/seed/rome/600/400",
+      "imageHint": "Colosseum Rome"
+    },
+    {
+      "id": "user-avatar",
+      "description": "A placeholder for a user's avatar.",
+      "imageUrl": "https://picsum.photos/seed/avatar/100/100",
+      "imageHint": "person portrait"
+    }
+  ]
 }
