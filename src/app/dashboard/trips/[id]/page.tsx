@@ -9,8 +9,9 @@ import { format } from 'date-fns';
 import TripDetailsTabs from '@/components/trips/trip-details-tabs';
 
 export default function TripDetailsPage({ params }: { params: { id: string } }) {
+  const { id } = params;
   const [trips] = useLocalStorage<Trip[]>('viaje-trips', mockTrips);
-  const trip = trips.find((t) => t.id === params.id);
+  const trip = trips.find((t) => t.id === id);
 
   if (!trip) {
     notFound();
