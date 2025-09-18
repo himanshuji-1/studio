@@ -11,6 +11,7 @@ export function useLocalStorage<T>(key: string, initialValue: T): [T, (value: T 
       if (item) {
         setStoredValue(JSON.parse(item));
       } else {
+        // We only want to set the initial value if one isn't already in local storage.
         window.localStorage.setItem(key, JSON.stringify(initialValue));
         setStoredValue(initialValue);
       }
@@ -18,7 +19,8 @@ export function useLocalStorage<T>(key: string, initialValue: T): [T, (value: T 
       console.log(error);
       setStoredValue(initialValue);
     }
-  }, [key, initialValue]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [key]);
 
   const setValue = useCallback((value: T | ((val: T) => T)) => {
     try {
