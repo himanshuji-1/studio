@@ -36,3 +36,47 @@ export type Expense = {
   category: ExpenseCategory;
   date: string;
 };
+
+export type ChatMessage = {
+  id: string;
+  user: string;
+  avatar: string;
+  timestamp: number;
+  message: string;
+};
+
+export type Review = {
+  id: string;
+  placeId: string; // Corresponds to an itinerary item or hotel
+  user: string;
+  avatar: string;
+  rating: number;
+  comment: string;
+  timestamp: number;
+};
+
+export type WeatherInfo = {
+  current: {
+    temp: number;
+    condition: string;
+    icon: string;
+    humidity: number;
+  };
+  forecast: {
+    date: string;
+    day: string;
+    temp: number;
+    condition: string;
+    icon: string;
+  }[];
+  alert?: {
+    title: string;
+    description: string;
+  };
+};
+
+export type SafetyInfo = {
+  crimeRate: 'low' | 'medium' | 'high';
+  stats: { name: string; value: number }[];
+  safetyTips: string[];
+};
