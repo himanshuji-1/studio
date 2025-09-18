@@ -2,15 +2,17 @@
 import { useLocalStorage } from '@/lib/hooks';
 import type { Trip } from '@/lib/types';
 import { mockTrips } from '@/data/mock';
-import { notFound } from 'next/navigation';
+import { notFound, useParams } from 'next/navigation';
 import Image from 'next/image';
 import { MapPin, Calendar } from 'lucide-react';
 import { format } from 'date-fns';
 import TripDetailsTabs from '@/components/trips/trip-details-tabs';
 
-export default function TripDetailsPage({ params }: { params: { id: string } }) {
+export default function TripDetailsPage() {
+  const params = useParams();
+  const id = params.id as string;
   const [trips] = useLocalStorage<Trip[]>('viaje-trips', mockTrips);
-  const trip = trips.find((t) => t.id === params.id);
+  const trip = trips.find((t) => t.id === id);
 
   if (!trip) {
     notFound();
