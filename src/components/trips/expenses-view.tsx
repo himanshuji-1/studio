@@ -6,7 +6,7 @@ import type { Expense, ExpenseCategory } from '@/lib/types';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
-import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
+import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from 'recharts';
 import { PlusCircle, Utensils, Hotel, Car, ShoppingBag, Clapperboard, MoreHorizontal } from 'lucide-react';
 
 const mockExpenses: Expense[] = [
